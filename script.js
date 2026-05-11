@@ -1,33 +1,95 @@
-// Data Katalog Produk Jualan
+// ==========================================
+// DATA KATALOG PRODUK UTAMA
+// ==========================================
 const products = [
-  { id:1, name:"BMW M3 GTR", series:"Premium", category:"Europe", image:"https://down-id.img.susercontent.com/file/sg-11134201-8260v-mj45zqqwnnrb3c", icon:"", price:200000, badge:"new", scale:"1:64", color:"Silver" },
-  { id:2, name:"Porsche 993 GT2", series:"Premium", category:"Europe", image:"https://i.ebayimg.com/images/g/IfIAAeSwSVZp0am2/s-l1200.webp", icon:"", price:175000, badge:"new", scale:"1:64", color:"Silver" },
-  { id:3, name:"Porsche 935", series:"Silver", category:"Europe", image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTU0BMweRSLSWvp8B1wMyueytYSPhlXYIGIfg&s", icon:"🟡", price:75000, badge:"", scale:"1:64", color:"Merah" },
-  { id:4, name:"Nissan Silvia s13 ", series:"JDM Legends", category:"jdm", image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRriOc7tycWTtp0boOSPY5OAq1Ca5jXYxkojw&s", icon:"🐎", price:55000, badge:"", scale:"1:64", color:"Kuning" },
-  { id:5, name:"Optimus Prime", series:"Film", category:"Truck", image:"https://i.ebayimg.com/images/g/CssAAeSwufBoXVYT/s-l1200.jpg", icon:"⚡", price:45000, badge:"loose", scale:"1:64", color:"Red & Blue" },
-  { id:6, name:"Porsche 911 Carrera RS", series:"Premium", category:"premium", image:"", icon:"🏁", price:145000, badge:"", scale:"1:64", color:"Putih" },
-  { id:7, name:"Chevrolet Camaro ZL1", series:"Muscle Mania", category:"muscle", image:"", icon:"🔥", price:50000, badge:"", scale:"1:64", color:"Orange" },
-  { id:8, name:"'70 Dodge Charger R/T", series:"Super Treasure Hunt", category:"supertreasure", image:"", icon:"💎", price:350000, badge:"rare", scale:"1:64", color:"Hitam" },
-  { id:9, name:"Honda Civic Type R FK8", series:"JDM Legends", category:"jdm", image:"", icon:"🏮", price:75000, badge:"new", scale:"1:64", color:"Merah" },
-  { id:10, name:"Ferrari F40", series:"Premium", category:"premium", image:"", icon:"🐴", price:165000, badge:"", scale:"1:64", color:"Merah Ferrari" },
-  { id:11, name:"Mazda RX-7 FD", series:"JDM Legends", category:"jdm", image:"", icon:"🌀", price:80000, badge:"", scale:"1:64", color:"Putih" },
-  { id:12, name:"'69 Ford Mustang Boss 302", series:"Super Treasure Hunt", category:"supertreasure", image:"", icon:"⭐", price:400000, badge:"rare", scale:"1:64", color:"Hijau" },
-  { id:13, name:"BMW M4 G82", series:"Mainline", category:"mainline", image:"", icon:"🔵", price:40000, badge:"new", scale:"1:64", color:"Biru M" },
-  { id:14, name:"Subaru WRX STI", series:"Rally Legends", category:"themed", image:"", icon:"🌧️", price:60000, badge:"", scale:"1:64", color:"Biru WRX" },
-  { id:15, name:"McLaren 720S", series:"Premium", category:"premium", image:"", icon:"🚀", price:155000, badge:"", scale:"1:64", color:"Orange McLaren" },
-  { id:16, name:"Mitsubishi Lancer Evo X", series:"JDM Legends", category:"jdm", image:"", icon:"🦅", price:70000, badge:"", scale:"1:64", color:"Putih" },
-  { id:17, name:"Pontiac GTO '65", series:"Mainline", category:"mainline", image:"", icon:"🎯", price:42000, badge:"", scale:"1:64", color:"Merah Maroon" },
-  { id:18, name:"Dodge Viper ACR", series:"Muscle Mania", category:"muscle", image:"", icon:"🐍", price:58000, badge:"", scale:"1:64", color:"Hitam-Merah" },
-  { id:19, name:"Audi R8 V10 Plus", series:"Premium", category:"premium", image:"", icon:"💠", price:135000, badge:"new", scale:"1:64", color:"Putih" },
-  { id:20, name:"'55 Chevy Bel Air Gasser", series:"Super Treasure Hunt", category:"supertreasure", image:"", icon:"👑", price:450000, badge:"rare", scale:"1:64", color:"Hijau Metalik" },
+  { id:1, name:"BMW M3 GTR", series:"Premium", category:"premium", image:"https://down-id.img.susercontent.com/file/sg-11134201-8260v-mj45zqqwnnrb3c", icon:"", price:200000, badge:"new", scale:"1:64", color:"Silver" },
+  { id:2, name:"Porsche 993 GT2", series:"Premium", category:"premium", image:"https://i.ebayimg.com/images/g/IfIAAeSwSVZp0am2/s-l1200.webp", icon:"", price:175000, badge:"new", scale:"1:64", color:"Silver" },
+  { id:3, name:"Porsche 935", series:"Silver", category:"premium", image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTU0BMweRSLSWvp8B1wMyueytYSPhlXYIGIfg&s", icon:"🟡", price:75000, badge:"new", scale:"1:64", color:"Merah" },
+  { id:4, name:"Nissan Silvia s13", series:"JDM Legends", category:"jdm", image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRriOc7tycWTtp0boOSPY5OAq1Ca5jXYxkojw&s", icon:"🐎", price:55000, badge:"new", scale:"1:64", color:"Kuning" },
+  { id:5, name:"Optimus Prime", series:"Film", category:"Truck", image:"https://i.ebayimg.com/images/g/CssAAeSwufBoXVYT/s-l1200.jpg", icon:"⚡", price:45000, badge:"loose", scale:"1:64", color:"Red & Blue" }
 ];
 
 // ==========================================
-// FITUR BARU: DATA & FUNGSI KOLEKSI LANGKA
+// DATA & FUNGSI CUSTOM PARTS
 // ==========================================
+// Pastikan "category" sesuai dengan nama di filter (engine, velg, figur)
+const customParts = [
+  { id: 101, name: "Engine bay Supra", series: "Custom Parts", category: "engine", image: "supra.jpg", icon: "🛞", price: 8000, badge: "new raw", scale: "1:64", color: "raw" },
+  { id: 102, name: "Engine Civic Eg", series: "Custom Parts", category: "engine", image: "eg.jpg", icon: "🛞", price: 15000, badge: "new raw", scale: "1:64", color: "raw" },
+  { id: 103, name: "Engine R34", series: "Custom Parts", category: "engine", image: "r34.jpg", icon: "🛞", price: 18000, badge: "new raw", scale: "1:64", color: "raw" },
+  
+  // Contoh Tambahan Data Velg & Figur
+  { id: 104, name: "Velg TE37 Bronze", series: "Rims", category: "velg", image: "", icon: "🛞", price: 12000, badge: "new", scale: "1:64", color: "Bronze" },
+  { id: 105, name: "Mini Figur Mekanik", series: "Diorama", category: "figur", image: "", icon: "🧍", price: 10000, badge: "", scale: "1:64", color: "Painted" }
+];
 
-// Anda bisa menambahkan foto koleksi pribadi Anda di sini.
-// Masukkan nama file foto di bagian `image: "namagambar.jpg"`.
+// Variabel untuk menyimpan status filter Custom Part (default: 'all')
+let activeCustomFilter = 'all';
+
+// Fungsi saat tombol filter Custom Part diklik
+function setCustomFilter(cat, btn) {
+  activeCustomFilter = cat;
+  
+  // Hapus class 'active' dari semua tombol filter di dalam Custom Part
+  document.getElementById('custom-filters').querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  
+  // Tambahkan class 'active' ke tombol yang sedang diklik
+  btn.classList.add('active');
+  
+  // Render ulang produknya
+  renderCustomParts();
+}
+
+// Fungsi untuk menampilkan Custom Part
+function renderCustomParts() {
+  const grid = document.getElementById('custom-parts-grid');
+  if (!grid) return;
+
+  // Saring data berdasarkan filter yang aktif
+  const filtered = customParts.filter(p => {
+    return activeCustomFilter === 'all' || p.category === activeCustomFilter;
+  });
+
+  // Jika produk kosong setelah difilter
+  if (filtered.length === 0) {
+    grid.innerHTML = `<div class="no-results"><div class="no-results-icon">🔍</div><p>Part tidak ditemukan.</p></div>`;
+    return;
+  }
+
+  // Tampilkan HTML-nya
+  grid.innerHTML = filtered.map(p => {
+    const inCart = cart[p.id];
+    const badgeHTML = p.badge ? `<div class="product-badge ${p.badge}">${p.badge}</div>` : '';
+    const btnText = inCart ? '✓ Di Keranjang' : '+ Keranjang';
+    const btnClass = inCart ? 'add-btn added' : 'add-btn';
+    
+    const visualHTML = p.image 
+      ? `<img src="${p.image}" alt="${p.name}" class="product-photo">` 
+      : `<span style="font-size: 50px;">${p.icon}</span>`;
+
+    return `
+      <div class="product-card">
+        <div class="product-img">
+          ${badgeHTML}
+          ${visualHTML}
+        </div>
+        <div class="product-info">
+          <div class="product-series">${p.series}</div>
+          <div class="product-name">${p.name}</div>
+          <div class="product-scale">Skala ${p.scale} · ${p.color}</div>
+          <div class="product-footer">
+            <div class="product-price">${formatRp(p.price)}</div>
+            <button class="${btnClass}" onclick="addToCart(${p.id})">${btnText}</button>
+          </div>
+        </div>
+      </div>
+    `;
+  }).join('');
+}
+
+// ==========================================
+// DATA & FUNGSI KOLEKSI LANGKA (TIDAK DIJUAL)
+// ==========================================
 const rareCollection = [
   { id: 1, title: "Custom s13 & Custom Supra Castrol", image: "putih.jpg", icon: "📸", desc: "Perfect detail for decal and nice colour." },
   { id: 2, title: "Custom porsche 911 Rexy", image: "pink.jpg", icon: "📸", desc: "Super rare decal Rexy in Hotwheels." },
@@ -41,7 +103,6 @@ function renderRareCollection() {
   if (!grid) return;
 
   grid.innerHTML = rareCollection.map(item => {
-    // Jika gambar tersedia, pakai tag <img>. Jika tidak, pakai icon emoji
     const visualHTML = item.image 
       ? `<img src="${item.image}" alt="${item.title}" class="rare-photo">` 
       : `<span style="font-size: 50px;">${item.icon}</span>`;
@@ -61,9 +122,8 @@ function renderRareCollection() {
 }
 
 // ==========================================
-// FUNGSI LAMA (TIDAK DIUBAH)
+// FUNGSI SISTEM (KERANJANG, FILTER, CHECKOUT)
 // ==========================================
-
 let cart = {};
 let activeFilter = 'all';
 
@@ -81,6 +141,8 @@ function setFilter(cat, btn) {
 function renderProducts() {
   const q = document.getElementById('search-input').value.toLowerCase();
   const grid = document.getElementById('products-grid');
+  if(!grid) return;
+  
   const filtered = products.filter(p => {
     const matchFilter = activeFilter === 'all' || p.category === activeFilter;
     const matchSearch = !q || p.name.toLowerCase().includes(q) || p.series.toLowerCase().includes(q);
@@ -125,15 +187,19 @@ function renderProducts() {
 }
 
 function addToCart(id) {
-  const p = products.find(x => x.id === id);
+  // Cari di array produk utama ATAU array custom parts
+  const p = products.find(x => x.id === id) || customParts.find(x => x.id === id);
   if (!p) return;
+  
   if (cart[id]) {
     cart[id].qty++;
   } else {
     cart[id] = { ...p, qty: 1 };
   }
+  
   updateCart();
   renderProducts();
+  renderCustomParts();
   showToast(`${p.name} ditambahkan ke keranjang!`);
 }
 
@@ -179,6 +245,7 @@ function changeQty(id, delta) {
   if (cart[id].qty <= 0) delete cart[id];
   updateCart();
   renderProducts();
+  renderCustomParts();
 }
 
 function openCart() {
@@ -216,6 +283,7 @@ function closeAll() {
   cart = {};
   updateCart();
   renderProducts();
+  renderCustomParts();
 }
 
 function placeOrder() {
@@ -248,7 +316,10 @@ function showToast(msg) {
   setTimeout(() => t.classList.remove('show'), 3000);
 }
 
-// Init
+// ==========================================
+// INIT (MENJALANKAN SEMUA FUNGSI SAAT WEB DIBUKA)
+// ==========================================
 renderProducts();
+renderCustomParts(); 
+renderRareCollection(); 
 updateCart();
-renderRareCollection(); // PANGGIL FUNGSI KOLEKSI LANGKA

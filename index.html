@@ -9,7 +9,6 @@
 </head>
 <body>
 
-<!-- HEADER -->
 <header>
   <a class="logo" href="#">
     <img src="logo.jpg" alt="ZAL Diecast Logo" width="52" height="52" style="border-radius:50%;object-fit:cover;"/>
@@ -17,7 +16,8 @@
   </a>
   <nav>
     <a href="#catalog">Katalog</a>
-    <a href="#rare">Koleksi Langka</a> <!-- LINK BARU -->
+    <a href="#custom-part">Custom Part</a>
+    <a href="#rare">Koleksi Langka</a>
     <a href="#contact">Kontak</a>
   </nav>
   <button class="cart-btn" onclick="openCart()">
@@ -26,14 +26,13 @@
   </button>
 </header>
 
-<!-- HERO -->
 <section class="hero">
   <div class="hero-badge">🏎️ Toko Diecast #1 Indonesia</div>
   <div style="margin-bottom:20px;">
     <img src="logo.jpg" alt="ZAL Diecast Logo" width="120" height="120" style="border-radius:50%;object-fit:cover;filter:drop-shadow(0 0 24px rgba(2,136,209,0.8));"/>
   </div>
   <h1>Koleksi<em>Die-Cast</em>Terbaik</h1>
-  <p>Ratusan pilihan Hot Wheels original dari berbagai seri eksklusif. Authentic, berkualitas, dan siap dikirim ke seluruh Indonesia.</p>
+  <p>Hot Wheels original dari berbagai seri eksklusif. Authentic, berkualitas, serta banyak pilihan custom parts yang bisa anda order. Siap dikirim ke seluruh Indonesia.</p>
   <div class="hero-actions">
     <a href="#catalog" class="btn-primary" style="text-decoration:none;">Lihat Katalog</a>
     <button class="btn-outline">Seri Terbaru</button>
@@ -46,7 +45,6 @@
   </div>
 </section>
 
-<!-- CATALOG -->
 <main id="catalog">
   <div class="section-header">
     <div class="section-title">Katalog <span>Produk</span></div>
@@ -55,8 +53,8 @@
 
   <div class="filters" id="filters">
     <button class="filter-btn active" onclick="setFilter('all', this)">Semua</button>
-    <button class="filter-btn" onclick="setFilter('mainline', this)">Mainline</button>
     <button class="filter-btn" onclick="setFilter('premium', this)">Premium</button>
+    <button class="filter-btn" onclick="setFilter('mainline', this)">Mainline</button>
     <button class="filter-btn" onclick="setFilter('supertreasure', this)">Super Treasure Hunt</button>
     <button class="filter-btn" onclick="setFilter('themed', this)">Themed Series</button>
     <button class="filter-btn" onclick="setFilter('muscle', this)">Muscle Cars</button>
@@ -66,25 +64,40 @@
   <div class="products-grid" id="products-grid"></div>
 </main>
 
-<!-- KOLEKSI LANGKA (FITUR BARU) -->
-<section id="rare" class="rare-section">
+<main id="custom-part">
+  <div class="section-header">
+    <div class="section-title">Custom <span>Part</span></div>
+  </div>
+  
+  <p style="color: var(--muted); margin-bottom: 24px;">Koleksi mesin, velg, dan figurin untuk diecast Anda.</p>
+  
+  <div class="filters" id="custom-filters">
+    <button class="filter-btn active" onclick="setCustomFilter('all', this)">Semua</button>
+    <button class="filter-btn" onclick="setCustomFilter('engine', this)">Engine</button>
+    <button class="filter-btn" onclick="setCustomFilter('velg', this)">Velg</button>
+    <button class="filter-btn" onclick="setCustomFilter('figur', this)">Mini Figur</button>
+  </div>
+
+  <div class="products-grid" id="custom-parts-grid"></div> 
+</main>
+
+<section id="rare" class="rare-section" style="padding: 40px 20px;">
   <div class="section-header">
     <div class="section-title">Koleksi <span>Langka</span></div>
   </div>
-  <p style="color: var(--muted); margin-bottom: 24px;">Galeri eksklusif diecast langka dan koleksi pribadi kami. Tidak untuk dijual.</p>
-  <div class="rare-grid" id="rare-grid">
-    <!-- Foto koleksi akan di-render di sini oleh JavaScript -->
-  </div>
+  <p style="color: var(--muted); margin-bottom: 24px; text-align: center;">Galeri eksklusif diecast langka dan koleksi pribadi kami. Tidak untuk dijual.</p>
+  
+  <div class="rare-grid" id="rare-grid"></div>
 </section>
 
-<!-- CONTACT SECTION -->
-<section id="contact" class="contact-section">
+<section id="contact" class="contact-section" style="position: relative; z-index: 10;">
   <div class="section-header">
     <div class="section-title">Hubungi <span>Kami</span></div>
   </div>
   <p style="color: var(--muted); margin-bottom: 20px;">Ikuti media sosial kami atau hubungi kami melalui platform di bawah ini untuk pemesanan dan update terbaru!</p>
+  
   <div class="contact-links">
-    <a href="https://wa.me/+625336884807" class="social-btn wa">WhatsApp</a>
+    <a href="https://wa.me/+625336884807" target="_blank" class="social-btn wa">WhatsApp</a>
     <a href="https://instagram.com/zaldiceast" target="_blank" class="social-btn ig">Instagram</a>
     <a href="https://tiktok.com/@fariddzal" target="_blank" class="social-btn tt">TikTok</a>
     <a href="https://tokopedia.com/zaldiceast" target="_blank" class="social-btn tp">Tokopedia</a>
@@ -92,7 +105,6 @@
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
   <div class="footer-inner">
     <div class="footer-brand">
@@ -106,8 +118,8 @@
       <h4>Menu</h4>
       <ul>
         <li><a href="#catalog">Katalog Produk</a></li>
+        <li><a href="#custom-part">Custom Part</a></li>
         <li><a href="#rare">Koleksi Langka</a></li>
-        <li><a href="#catalog">Seri Premium</a></li>
       </ul>
     </div>
     <div class="footer-col">
@@ -126,7 +138,6 @@
   </div>
 </footer>
 
-<!-- CART SIDEBAR -->
 <div class="cart-overlay" id="cart-overlay" onclick="closeCart()"></div>
 <div class="cart-sidebar" id="cart-sidebar">
   <div class="cart-head">
@@ -143,7 +154,6 @@
   </div>
 </div>
 
-<!-- CHECKOUT MODAL -->
 <div class="modal-overlay" id="modal-overlay">
   <div class="modal" id="checkout-modal">
     <div id="form-screen">
@@ -214,7 +224,6 @@
   </div>
 </div>
 
-<!-- TOAST -->
 <div class="toast" id="toast"></div>
 
 <script src="script.js"></script>
